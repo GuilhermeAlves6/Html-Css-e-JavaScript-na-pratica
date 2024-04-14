@@ -1,22 +1,28 @@
 body{
-    background-color: orange;
-    color: brown;
+    background-color: #f47502;
+    color: rgb(42, 165, 155);
+    font-size: 10px;
 }
 
 .corTextoCadastro{
     color: red;
-
 }
+
+.paragrafo-class{
+    font-size: 2em;
+}
+
 .botao{
     width: 200px;
     height: 40px;
-    border: 2px solid green;
+    border: 0.5em solid black;
     background-color: green;
     border-radius: 25px;
     text-align: center;
-    color: white;
+    
     font-weight: bold;
     font-size: 22px;
     padding-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
