@@ -17,7 +17,13 @@
         }
 
         function chamarFuncao(){
-            alert("Olá");
+            var elementoTextoDinamico = document.getElementById("textoDinamico");
+            elementoTextoDinamico.innerText = "Olá!";
+            for(i = 0 ; i < 10 ; i++){
+                elementoTextoDinamico.innerText = elementoTextoDinamico.innerText + i;
+
+            }
+            
         }
     </script>
 </head>
@@ -44,6 +50,7 @@
         </div>
     </form>
     <button onclick="chamarFuncao()">Olá</button>
+    <div id="textoDinamico"></div>
 
     <a href="index.html">Voltar</a>
 </body>
