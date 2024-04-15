@@ -5,13 +5,28 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Contato</title>
     <link rel="stylesheet" href="estilo/style.css"/>
+    <script type="text/javascript">
+        function confirmarEnvio(){
+            if(confirm("Você deseja realmente enviar uma mensagem?")){
+                alert("O formulário será enviado");
+                return true;
+            }else{
+                alert("O envio foi cancelado!");
+                return false;
+            }
+        }
+
+        function chamarFuncao(){
+            alert("Olá");
+        }
+    </script>
 </head>
 <body>
     Bem vindo a página de contatos amigo
 
     <br/>
 
-    <form method="GET" action="contato.html">
+    <form method="GET" action="contato.html" onsubmit="return confirmarEnvio()">
         <div>
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome"/>
@@ -28,6 +43,7 @@
              <input type="submit" value="Enviar Mensagem"/>
         </div>
     </form>
+    <button onclick="chamarFuncao()">Olá</button>
 
     <a href="index.html">Voltar</a>
 </body>
