@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+
+    
+        Valor 1: <input type="text" id="valor1" name="valor1"/><br>
+        Operador: <select id="operador">
+                           <option value="somar">Somar</option>
+                           <option value="subtrair">subtrair</option>
+                           <option value="Multiplicar">Multiplicar</option>
+                           <option value="Dividir">Dividir</option>
+                   </select><br>
+        Valor 2: <input type="text" id="valor2" name="valor2"/><br/>
+        <button onclick="calcular()">Calcular</button>
+    
+        <div id="resultado"></div>
+
+
+    <script type="text/javascript">
+        function calcular(){
+            console.log("Olá");
+            var v1 = document.getElementById("valor1");
+            var v2 = document.getElementById("valor2");
+            var operador = document.getElementById("operador");
+            var operacaoSelecionada = operador.options[operador.selectedIndex].value;
+
+            console.log(v1.value);
+            console.log(v2.value);
+            console.log(operacaoSelecionada);
+            var resultado;
+            switch(operacaoSelecionada){
+                case("somar") : {
+                    resultado = parseFloat(v1.value) + parseFloat(v2.value);
+                    console.log(resultado);
+                    break;
+                }
+                case("subtrair") : {
+                    resultado = parseFloat(v1.value) - parseFloat(v2.value);
+                    break;
+
+                } case("multiplicar") : {
+                    resultado = parseFloat(v1.value) * parseFloat(v2.value);
+                    break;
+
+                }
+                case("dividir") : {
+                    resultado = parseFloat(v1.value) / parseFloat(v2.value);
+                    break;
+                
+                }
+            }
+
+            var divResultado = document.getElementById("resultado");
+            divResultado.innerText = resultado;
+        }
+    </script>
+
+</body>
+</html>
